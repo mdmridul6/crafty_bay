@@ -1,5 +1,5 @@
-import 'package:ecomm/presentation/ui/screens/splash_screen.dart';
-import 'package:ecomm/presentation/ui/utils/app_clolors.dart';
+import 'package:crafty_bay/presentation/ui/screens/splash_screen.dart';
+import 'package:crafty_bay/presentation/ui/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CraftyBayApp extends StatelessWidget {
@@ -10,7 +10,7 @@ class CraftyBayApp extends StatelessWidget {
     return MaterialApp(
       home: const SplashScreen(),
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: AppClolors.themeColor),
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.themeColor),
       ),
     );
   }
