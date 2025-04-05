@@ -2,5 +2,5 @@ import 'package:ecomm/app.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const CruftyBay());
+  runApp(const CraftyBayApp());
 }

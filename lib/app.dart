@@ -2,8 +2,8 @@ import 'package:ecomm/presentation/ui/screens/splash_screen.dart';
 import 'package:ecomm/presentation/ui/utils/app_clolors.dart';
 import 'package:flutter/material.dart';
 
-class CruftyBay extends StatelessWidget {
-  const CruftyBay({super.key});
+class CraftyBayApp extends StatelessWidget {
+  const CraftyBayApp({super.key});
 
   @override
   Widget build(BuildContext context) {
