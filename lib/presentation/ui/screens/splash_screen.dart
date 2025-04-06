@@ -1,5 +1,7 @@
+import 'package:crafty_bay/presentation/ui/screens/email_verification_screen.dart';
+import 'package:crafty_bay/presentation/ui/widgets/app_logo_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -9,6 +11,11 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  Future<void> moveToNextScreen() async {
+    await Future.delayed(Duration(seconds: 2));
+    Get.off(() => EmailVerificationScreen());
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Spacer(),
-              SvgPicture.asset('assets/images/logo.svg', width: 100),
+              AppLogoWidget(),
               Spacer(),
               CircularProgressIndicator(),
               SizedBox(height: 16),
