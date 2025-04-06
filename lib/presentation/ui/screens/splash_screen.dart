@@ -11,9 +11,15 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  Future<void> moveToNextScreen() async {
+  Future<void> _moveToNextScreen() async {
     await Future.delayed(Duration(seconds: 2));
     Get.off(() => EmailVerificationScreen());
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _moveToNextScreen();
   }
 
   @override
