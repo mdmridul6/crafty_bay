@@ -1,5 +1,8 @@
+import 'package:crafty_bay/presentation/ui/screens/otp_verification_screen.dart';
 import 'package:crafty_bay/presentation/ui/widgets/app_logo_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
 
 class EmailVerificationScreen extends StatefulWidget {
   const EmailVerificationScreen({super.key});
@@ -12,6 +15,12 @@ class EmailVerificationScreen extends StatefulWidget {
 class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
   final TextEditingController _emailTextEditingController =
       TextEditingController();
+
+
+  void _onTapNextButton(){
+    Get.to(() => OtpVerificationScreen());
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +50,7 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                 decoration: InputDecoration(hintText: "Email"),
               ),
               SizedBox(height: 8),
-              ElevatedButton(onPressed: () {}, child: Text("Next")),
+              ElevatedButton(onPressed: _onTapNextButton, child: Text("Next")),
             ],
           ),
         ),
