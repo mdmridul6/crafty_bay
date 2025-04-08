@@ -36,32 +36,28 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
               ),
               SizedBox(height: 8),
               TextFormField(
-                controller: _emailTextEditingController,
                 decoration: InputDecoration(hintText: "First name"),
                 textInputAction: TextInputAction.next,
               ),
               SizedBox(height: 8),
               TextFormField(
                 textInputAction: TextInputAction.next,
-                controller: _emailTextEditingController,
                 decoration: InputDecoration(hintText: "Last name"),
               ),
               SizedBox(height: 8),
               TextFormField(
                 textInputAction: TextInputAction.next,
-                controller: _emailTextEditingController,
+                keyboardType: TextInputType.number,
                 decoration: InputDecoration(hintText: "Mobile Number"),
               ),
               SizedBox(height: 8),
               TextFormField(
                 textInputAction: TextInputAction.next,
-                controller: _emailTextEditingController,
                 decoration: InputDecoration(hintText: "City"),
               ),
               SizedBox(height: 8),
               TextFormField(
                 textInputAction: TextInputAction.next,
-                controller: _emailTextEditingController,
                 maxLines: 4,
                 decoration: InputDecoration(hintText: "Shipping Address"),
               ),
