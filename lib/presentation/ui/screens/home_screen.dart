@@ -1,5 +1,6 @@
 import 'package:crafty_bay/presentation/ui/utils/assets_path.dart';
 import 'package:crafty_bay/presentation/ui/widgets/app_bar_circular_button.dart';
+import 'package:crafty_bay/presentation/ui/widgets/category_item.dart';
 import 'package:crafty_bay/presentation/ui/widgets/home_slider.dart';
 import 'package:crafty_bay/presentation/ui/widgets/search_input.dart';
 import 'package:flutter/material.dart';
@@ -25,6 +26,44 @@ class _HomeScreenState extends State<HomeScreen> {
             SearchInput(),
             SizedBox(height: 16),
             HomeSlider(),
+            SizedBox(height: 16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Categories",
+                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    "See More",
+                    style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            SizedBox(
+              height: 160,
+              child: ListView.separated(
+                scrollDirection: Axis.horizontal,
+                itemCount: 10,
+                itemBuilder: (context, index) {
+                  return CategoryItem(
+                    iconData: Icons.computer_outlined,
+                    iconTitle: "Electronic",
+                  );
+                },
+                separatorBuilder: (context, index) {
+                  return SizedBox(width: 16);
+                },
+              ),
+            ),
           ],
         ),
       ),
