@@ -2,12 +2,11 @@ import 'package:crafty_bay/presentation/ui/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CategoryItem extends StatelessWidget {
-  const CategoryItem({
-    super.key, required this.iconData, required this.iconTitle,
-  });
+  const CategoryItem({super.key, required this.iconData, required this.iconTitle, required this.onTap});
 
   final IconData iconData;
   final String iconTitle;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -20,17 +19,14 @@ class CategoryItem extends StatelessWidget {
             color: AppColors.themeColor.withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(8),
           ),
-          child: Icon(
-            iconData,
-            color: AppColors.themeColor,
-            size: 48,
-          ),
+          child: Icon(iconData, color: AppColors.themeColor, size: 48),
         ),
         SizedBox(height: 8),
         Text(
           iconTitle,
-          style: Theme.of(context).textTheme.titleMedium!
-              .copyWith(color: AppColors.themeColor),
+          style: Theme.of(
+            context,
+          ).textTheme.titleMedium!.copyWith(color: AppColors.themeColor),
         ),
       ],
     );

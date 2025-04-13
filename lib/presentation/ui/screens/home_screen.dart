@@ -57,6 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   return CategoryItem(
                     iconData: Icons.computer_outlined,
                     iconTitle: "Electronic",
+                    onTap: () {},
                   );
                 },
                 separatorBuilder: (context, index) {
