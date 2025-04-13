@@ -28,11 +28,11 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
                 style: Theme.of(context).textTheme.headlineLarge,
               ),
               SizedBox(height: 8),
-              Text(
+              Text(textAlign: TextAlign.center,
                 "Get started with us by providing your information",
                 style: Theme.of(
                   context,
-                ).textTheme.bodyLarge?.copyWith(color: Colors.black54),
+                ).textTheme.bodyLarge?.copyWith(color: Colors.black54,),
               ),
               SizedBox(height: 8),
               TextFormField(
@@ -62,7 +62,7 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
                 decoration: InputDecoration(hintText: "Shipping Address"),
               ),
               SizedBox(height: 8),
-              ElevatedButton(onPressed: () {}, child: Text("Next")),
+              ElevatedButton(onPressed: () {}, child: Text("Complete")),
             ],
           ),
         ),

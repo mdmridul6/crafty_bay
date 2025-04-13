@@ -76,7 +76,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
               GetBuilder<OtpController>(
                 builder:
                     (controller) =>
-                        ElevatedButton(onPressed: () {}, child: Text("Verify")),
+                        ElevatedButton(onPressed: onTapVerifyButton, child: Text("Verify")),
               ),
 
               SizedBox(height: 16),
