@@ -1,4 +1,4 @@
-import 'package:crafty_bay/presentation/ui/widgets/app_logo_widget.dart';
+import 'package:crafty_bay/presentation/ui/widgets/home/app_logo_widget.dart';
 import 'package:flutter/material.dart';
 
 class CompleteProfileScreen extends StatefulWidget {

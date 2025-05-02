@@ -1,8 +1,5 @@
 import 'package:crafty_bay/presentation/ui/utils/assets_path.dart';
-import 'package:crafty_bay/presentation/ui/widgets/app_bar_circular_button.dart';
-import 'package:crafty_bay/presentation/ui/widgets/category_item.dart';
-import 'package:crafty_bay/presentation/ui/widgets/home_slider.dart';
-import 'package:crafty_bay/presentation/ui/widgets/search_input.dart';
+import 'package:crafty_bay/presentation/ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -19,55 +16,51 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: _buildAppBar(),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: Column(
-          children: [
-            SizedBox(height: 16),
-            SearchInput(),
-            SizedBox(height: 16),
-            HomeSlider(),
-            SizedBox(height: 16),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Categories",
-                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    "See More",
-                    style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-
-            SizedBox(
-              height: 160,
-              child: ListView.separated(
-                scrollDirection: Axis.horizontal,
-                itemCount: 10,
-                itemBuilder: (context, index) {
-                  return CategoryItem(
-                    iconData: Icons.computer_outlined,
-                    iconTitle: "Electronic",
-                    onTap: () {},
-                  );
-                },
-                separatorBuilder: (context, index) {
-                  return SizedBox(width: 16);
-                },
-              ),
-            ),
-          ],
+        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(height: 16),
+              SearchInput(),
+              SizedBox(height: 16),
+              HomeSlider(),
+              SizedBox(height: 16),
+              SectionHeader(sectionTitle: "Categories", onTap: () {}),
+              _buildCategorySection(),
+              _buildPopularSection(),
+              _buildSpecialSection(),
+              _buildNewSection(),
+            ],
+          ),
         ),
       ),
+    );
+  }
+
+  Widget _buildPopularSection() {
+    return Column(
+      children: [
+        SectionHeader(sectionTitle: "Popular", onTap: () {}),
+        SizedBox(height: 190, child: _buildProductSection()),
+      ],
+    );
+  }
+
+  Widget _buildSpecialSection() {
+    return Column(
+      children: [
+        SectionHeader(sectionTitle: "Special", onTap: () {}),
+        SizedBox(height: 190, child: _buildProductSection()),
+      ],
+    );
+  }
+
+  Widget _buildNewSection() {
+    return Column(
+      children: [
+        SectionHeader(sectionTitle: "New", onTap: () {}),
+        SizedBox(height: 190, child: _buildProductSection()),
+      ],
     );
   }
 
@@ -87,7 +80,16 @@ class _HomeScreenState extends State<HomeScreen> {
           onTap: () {},
           iconData: Icons.notifications_active_outlined,
         ),
+        SizedBox(width: 8),
       ],
     );
+  }
+
+  Widget _buildCategorySection() {
+    return SizedBox(height: 130, child: HorizontalCategoryList());
+  }
+
+  Widget _buildProductSection() {
+    return HorizontalProductList();
   }
 }

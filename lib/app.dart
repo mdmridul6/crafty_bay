@@ -11,6 +11,7 @@ class CraftyBayApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       initialBinding: ControllerBinding(),
+      debugShowCheckedModeBanner: false,
       home: const SplashScreen(),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.themeColor),

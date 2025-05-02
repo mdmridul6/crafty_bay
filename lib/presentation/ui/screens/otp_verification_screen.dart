@@ -1,7 +1,7 @@
 import 'package:crafty_bay/presentation/state_holders/otp_controller.dart';
 import 'package:crafty_bay/presentation/ui/screens/complete_profile_screen.dart';
 import 'package:crafty_bay/presentation/ui/utils/app_colors.dart';
-import 'package:crafty_bay/presentation/ui/widgets/app_logo_widget.dart';
+import 'package:crafty_bay/presentation/ui/widgets/home/app_logo_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
