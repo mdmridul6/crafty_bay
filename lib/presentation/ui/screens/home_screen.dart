@@ -1,7 +1,9 @@
+import 'package:crafty_bay/presentation/ui/screens/category_list_screen.dart';
 import 'package:crafty_bay/presentation/ui/utils/assets_path.dart';
 import 'package:crafty_bay/presentation/ui/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -25,7 +27,12 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(height: 16),
               HomeSlider(),
               SizedBox(height: 16),
-              SectionHeader(sectionTitle: "Categories", onTap: () {}),
+              SectionHeader(
+                sectionTitle: "Categories",
+                onTap: () {
+                  Get.to(CategoryListScreen());
+                },
+              ),
               _buildCategorySection(),
               _buildPopularSection(),
               _buildSpecialSection(),

@@ -1,10 +1,8 @@
-import 'package:crafty_bay/presentation/ui/widgets/category_item.dart';
+import 'package:crafty_bay/presentation/ui/widgets/category_card.dart';
 import 'package:flutter/material.dart';
 
 class HorizontalCategoryList extends StatelessWidget {
-  const HorizontalCategoryList({
-    super.key,
-  });
+  const HorizontalCategoryList({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +10,7 @@ class HorizontalCategoryList extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       itemCount: 10,
       itemBuilder: (context, index) {
-        return CategoryItem(
+        return CategoryCard(
           iconData: Icons.computer_outlined,
           iconTitle: "Electronic",
           onTap: () {},

@@ -5,6 +5,6 @@ export 'home/home_slider.dart';
 export 'home/horizontal_category_list.dart';
 export 'home/horizontal_product_list.dart';
 export 'home/search_input.dart';
-export 'category_item.dart';
+export 'category_card.dart';
 export 'product_card.dart';
 export 'section_header.dart';
