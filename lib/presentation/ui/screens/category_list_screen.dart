@@ -13,8 +13,10 @@ class CategoryListScreen extends StatelessWidget {
         child: GridView.builder(
           itemCount: 20,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 4,
-            childAspectRatio: 0.75,
+            mainAxisSpacing: 16,
+            crossAxisCount: 3,
+            childAspectRatio: 1,
+            crossAxisSpacing: 8
           ),
           itemBuilder: (context, index) {
             return CategoryCard(

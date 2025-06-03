@@ -1,4 +1,4 @@
-import 'package:crafty_bay/presentation/ui/screens/home_screen.dart';
+import 'package:crafty_bay/presentation/ui/screens/bottom_nav_bar_screen.dart';
 import 'package:crafty_bay/presentation/ui/widgets/home/app_logo_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,7 +13,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   Future<void> _moveToNextScreen() async {
     await Future.delayed(Duration(seconds: 4));
-    Get.off(() => HomeScreen());
+    Get.off(() => const BottomNavBarScreen());
   }
 
   @override

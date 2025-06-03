@@ -6,14 +6,14 @@ import 'package:crafty_bay/presentation/ui/screens/wish_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class BottomNavBar extends StatefulWidget {
-  const BottomNavBar({super.key});
+class BottomNavBarScreen extends StatefulWidget {
+  const BottomNavBarScreen({super.key});
 
   @override
-  State<BottomNavBar> createState() => _BottomNavBarState();
+  State<BottomNavBarScreen> createState() => _BottomNavBarScreenState();
 }
 
-class _BottomNavBarState extends State<BottomNavBar> {
+class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
   List<Widget> screens = [
     HomeScreen(),
     CategoryListScreen(),
@@ -26,11 +26,12 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder(
+    return GetBuilder<BottomNavigationController>(
       builder: (_) {
         return Scaffold(
           body: screens[_navBarController.selectedIndex],
           bottomNavigationBar: NavigationBar(
+            selectedIndex: _navBarController.selectedIndex,
             onDestinationSelected: _navBarController.onChangeIndex,
             destinations: [
               NavigationDestination(
